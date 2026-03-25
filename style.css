@@ -1,0 +1,107 @@
+:root {
+    --primary-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --btn-color: #222;
+    /* Chart Colors matching the image */
+    --housing-color: #ff5a78; 
+    --food-color: #4caf50;    
+    --trans-color: #ffc107;   
+    --bills-color: #2196f3;   
+    --misc-color: #ff9800;    
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.tracker-card {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 25px;
+}
+
+/* Form Styling */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+select, input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #888;
+}
+
+.add-btn {
+    background-color: var(--btn-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-bottom: 30px;
+}
+
+.add-btn:hover {
+    background-color: #444;
+}
+
+/* Chart Container */
+.chart-container {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .form-group:last-child {
+        grid-column: span 2;
+    }
+}
